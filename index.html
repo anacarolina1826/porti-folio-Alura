@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta Tags Essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfólio</title>
+    
+    <!-- Links CSS do Usuário (Bootstrap e Custom) -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/parte2/style/style.css">
+
+    <!-- Carregando Tailwind CSS CDN (Necessário para o Rodapé) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuração de cores e fontes do Tailwind (necessário para o footer)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1f2937', // Um cinza escuro profissional
+                        'accent': '#6366f1', // Um tom de índigo para destaque (sua cor de marca)
+                        // Cores específicas dos novos ícones
+                        'insta-start': '#feda75',
+                        'insta-end': '#fa7e1e',
+                        // Cores específicas do GitHub (antiga, mantida por segurança)
+                        'github-bg': '#333', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Define a fonte Inter (se disponível)
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo para o ícone do Instagram usando gradiente */
+        .insta-icon {
+            /* Gradiente radial para simular o fundo do Instagram */
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+        }
+        .insta-icon:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+
+    <!-- CONTEÚDO DO USUÁRIO -->
+    <header>
+        <img src="/parte2/img/WhatsApp Image 2025-10-14 at 17.08.27 (1).jpeg" alt="Imagem do Cabeçalho">
+    </header> 
+    <main class="flex-grow">
+        <h1></h1>
+        <p>Olá! Sou Ana Carolina, desenvolvedora Front-end. HTML, tenho formação no curso técnico de informática.</p>
+        <a href="https://www.instagram.com/anacarol.bandrade">Instagram </a><!-- Tag âncora com cara de botão-->
+        <a href="#">Github </a>
+        <img src="/parte2/img/Carol.jpg" alt="Foto de perfil">
+    </main>
+    
+    <!-- FIM DO CONTEÚDO DO USUÁRIO -->
+
+    <!-- RODAPÉ PRINCIPAL INTEGRADO -->
+    <footer id="Rodapé " class="Rodapé bg-primary-dark text-white shadow-lg mt-auto">
+        <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+
+            <!-- Layout Principal do Rodapé (4 Colunas no Desktop, Empilhadas no Mobile) -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                
+                <!-- Seção 1: Nome e Slogan (Substitua por 'Carol' se preferir!) -->
+                <div class="md:col-span-1 space-y-3">
+                    <h3 class="text-2xl font-bold text-accent">Carol Portfólio</h3>
+                    <p class="text-gray-400 text-sm">Design, Código &amp; Inovação. Criando experiências digitais memoráveis.</p>
+                </div>
+
+                <!-- Seção 2: Links Rápidos -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold border-b border-gray-700 pb-1 mb-2">Navegação</h4>
+                    <ul class="space-y-1">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-accent transition duration-300">Início</a></li>
+                        <li><a href="#projetos" class="text-gray-400 hover:text-accent transition duration-300">Projetos</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-accent transition duration-300">Sobre Mim</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-accent transition duration-300">Serviços</a></li>
+                    </ul>
+                </div>
+
+                <!-- Seção 3: Contato - LINK DO TELEFONE ATUALIZADO PARA WHATSAPP -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold border-b border-gray-700 pb-1 mb-2">Fale Comigo</h4>
+                    <ul class="space-y-1 ">
+                        <li class="text-gray-400 text-sm">Email: <a href="mailto:seu.email@exemplo.com" class="hover:text-accent transition duration-300">seu.email@exemplo.com</a></li>
+                        <li id="contato " class="text-gray-400 text-sm">Telefone: <a id="contato" href="https://wa.me/5511987654321" target="_blank" class="hover:text-accent transition duration-300">(11) 98765-4321</a></li>
+                        <li class="text-gray-400 text-sm">Localização: Belo Horizonte, Brasil</li>
+                    </ul>
+                </div>
+
+                <!-- Seção 4: Redes Sociais com Estilo de Ícones -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold border-b border-gray-700 pb-1 mb-2">Conecte-se</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        
+                        <!-- Ícone: Instagram (Fundo Degradê) -->
+                        <a href="https://instagram.com/seuuser" target="_blank" 
+                           class="insta-icon p-3 rounded-xl shadow-lg transform transition duration-300 text-white" 
+                           aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+
+                        <!-- Ícone: GitHub (Círculo Claro com Ícone Escuro) -->
+                        <a href="https://github.com/seuuser" target="_blank" 
+                           class="git bg-white p-3 rounded-full shadow-lg hover:bg-gray-200 transform transition duration-300 text-gray-900 hover:scale-105" 
+                           aria-label="GitHub">
+                           <i class="bi bi-github"></i>
+                           
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linha de Copyright e Créditos -->
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; <span id="current-year"></span> Ana Carolina. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript simples para definir o ano atual automaticamente no copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
